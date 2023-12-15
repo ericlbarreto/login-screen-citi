@@ -1,11 +1,14 @@
 {
   "name": "nextjs-boilerplate",
   "private": true,
+  "homepage": "https://github.com/ericlbarreto/login-screen-citi",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
@@ -25,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.21",
+    "gh-pages": "^6.1.0",
     "prettier": "3.0.3",
     "typescript": "^5.1.6"
   }
